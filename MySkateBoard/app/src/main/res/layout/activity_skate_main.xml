@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Skate_MainActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_weight="0.08"
+        android:id="@+id/linearLayout2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Connect Status"
+            android:id="@+id/textView"
+            android:gravity="center_vertical" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Connect"
+            android:id="@+id/button_connect"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/button_speed_up"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/switch_connection_status" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:weightSum="1"
+        android:id="@+id/linearLayout"
+        android:layout_below="@+id/linearLayout2">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="119dp"
+            android:text="Speed Up"
+            android:id="@+id/button_speed_up"
+            android:layout_below="@+id/switch_connection_status"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:drawableRight="@drawable/up"
+            android:background="#ffffff" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:text="Stop"
+            android:id="@+id/button_stop"
+            android:drawableRight="@drawable/board_stop"
+            android:layout_gravity="center_horizontal"
+            android:background="#ffffff" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="131dp"
+            android:text="Speed Down"
+            android:id="@+id/button_speed_down"
+            android:drawableRight="@drawable/down"
+            android:layout_gravity="center_horizontal"
+            android:background="#ffffff" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:weightSum="1">
+
+        <SeekBar
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar_Speed"
+            android:layout_gravity="bottom"
+            android:max="100"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:indeterminate="false" />
+
+    </LinearLayout>
+
+</RelativeLayout>
